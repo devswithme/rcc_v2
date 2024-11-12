@@ -14,7 +14,7 @@ export async function POST(req: Request) {
 			where: {
 				id: result.id,
 			},
-			data: { link: `http://localhost:3000/id/${result.id}` },
+			data: { link: `https://rccdenpasar.org/id/${result.id}` },
 		})
 
 		const quota = await db.quota.findMany()

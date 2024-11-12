@@ -66,7 +66,7 @@ const Page = () => {
 		async function getQuota() {
 			try {
 				const result = await axios.get(
-					'http://localhost:3000/api/quota'
+					'https://rccdenpasar.org/api/quota'
 				)
 				setLoader(false)
 				setQuota(result.data)
@@ -82,7 +82,7 @@ const Page = () => {
 		setIsLoading(true)
 		try {
 			const result = await axios.post(
-				'http://localhost:3000/api/user',
+				'https://rccdenpasar.org/api/user',
 				values
 			)
 

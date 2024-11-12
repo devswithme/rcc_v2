@@ -40,7 +40,7 @@ const Page = () => {
 		async function getData() {
 			try {
 				const result = await axios.put(
-					'http://localhost:3000/api/user',
+					'https://rccdenpasar.org/api/user',
 					{
 						id: slug,
 					}
@@ -72,7 +72,7 @@ const Page = () => {
 
 	async function onSubmit(value: z.infer<typeof pinSchema>) {
 		if (value.PIN === process.env.NEXT_PUBLIC_PIN) {
-			await axios.patch('http://localhost:3000/api/user', {
+			await axios.patch('https://rccdenpasar.org/api/user', {
 				id: slug,
 			})
 			setMsg({

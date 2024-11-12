@@ -57,7 +57,7 @@ const Page = () => {
 		async function getUser() {
 			try {
 				const result = await axios.put(
-					'http://localhost:3000/api/user',
+					'https://rccdenpasar.org/api/user',
 					{
 						id: slug,
 					}
