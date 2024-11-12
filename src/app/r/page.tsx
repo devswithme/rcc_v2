@@ -78,15 +78,15 @@ const Page = () => {
 	}, [])
 
 	async function onSubmit(values: z.infer<typeof formSchema>) {
-		setIsLoading(true)
 		try {
+			setIsLoading(true)
 			const result = await axios.post(
 				'https://rccdenpasar.org/api/user',
 				values
 			)
 
 			router.push(`/id/${result.data.id}`)
-			setIsLoading(false)
+			setTimeout(() => setIsLoading(false), 1000)
 		} catch {
 			alert('terjadi kesalahan')
 		}
