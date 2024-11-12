@@ -68,8 +68,8 @@ const Page = () => {
 				const result = await axios.get(
 					'https://rccdenpasar.org/api/quota'
 				)
-				setLoader(false)
 				setQuota(result.data)
+				setLoader(false)
 			} catch {
 				alert('terjadi kesalahan')
 			}
@@ -86,8 +86,8 @@ const Page = () => {
 				values
 			)
 
-			setIsLoading(false)
 			router.push(`/id/${result.data.id}`)
+			setIsLoading(false)
 		} catch {
 			alert('terjadi kesalahan')
 		}

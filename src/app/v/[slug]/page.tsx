@@ -14,7 +14,7 @@ import { Skeleton } from '@/components/ui/skeleton'
 import { pinSchema } from '@/lib/schema'
 import { zodResolver } from '@hookform/resolvers/zod'
 import axios from 'axios'
-import { ArrowUpRight, CheckCircle, Info } from 'lucide-react'
+import { ArrowUpRight, CheckCircle, Info, Loader2 } from 'lucide-react'
 import Image from 'next/image'
 import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
@@ -35,6 +35,7 @@ const Page = () => {
 	})
 
 	const [loader, setLoader] = useState<boolean>(true)
+	const [isLoading, setIsLoading] = useState<boolean>(false)
 
 	useEffect(() => {
 		async function getData() {
@@ -72,6 +73,7 @@ const Page = () => {
 
 	async function onSubmit(value: z.infer<typeof pinSchema>) {
 		if (value.PIN === process.env.NEXT_PUBLIC_PIN) {
+			setIsLoading(true)
 			await axios.patch('https://rccdenpasar.org/api/user', {
 				id: slug,
 			})
@@ -80,8 +82,9 @@ const Page = () => {
 				data: 'Berhasil diverifikasi',
 				desc: 'Selamat beribadah',
 			})
-
+			
 			form.reset()
+			setIsLoading(false)
 		}
 	}
 
@@ -149,7 +152,7 @@ const Page = () => {
 							<Button
 								type='submit'
 								className='w-full !mt-10'>
-								Verify <ArrowUpRight />
+								{!isLoading ? (<>Verify <ArrowUpRight /></>) : (<>Mohon Tunggu <Loader2 className='animate-spin'/></>)}
 							</Button>
 						</form>
 					</Form>
