@@ -72,7 +72,7 @@ const Page = () => {
 	})
 
 	async function onSubmit(value: z.infer<typeof pinSchema>) {
-		if (value.PIN === process.env.PIN) {
+		if (value.PIN === process.env.NEXT_PUBLIC_PIN) {
 			await axios.patch('http://localhost:3000/api/user', {
 				id: slug,
 			})
