@@ -52,8 +52,7 @@ const Page = () => {
 						data: 'Maaf',
 						desc: 'ID sudah terverifikasi',
 					})
-			} catch (err) {
-				// console.error(err)
+			} catch {
 				setMsg({
 					status: 'err',
 					data: 'ID tidak ditemukan',

@@ -70,8 +70,8 @@ const Page = () => {
 				)
 				setLoader(false)
 				setQuota(result.data)
-			} catch (err) {
-				console.error(err)
+			} catch {
+				alert('terjadi kesalahan')
 			}
 		}
 		getQuota()
@@ -88,8 +88,8 @@ const Page = () => {
 
 			setIsLoading(false)
 			router.push(`/id/${result.data.id}`)
-		} catch (err) {
-			console.error(err)
+		} catch {
+			alert('terjadi kesalahan')
 		}
 	}
 
