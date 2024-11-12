@@ -86,7 +86,8 @@ const Page = () => {
 			)
 
 			router.push(`/id/${result.data.id}`)
-			setTimeout(() => setIsLoading(false), 1000)
+			form.reset()
+			// setIsLoading(false)
 		} catch {
 			alert('terjadi kesalahan')
 		}
