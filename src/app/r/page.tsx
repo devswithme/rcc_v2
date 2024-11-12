@@ -95,6 +95,7 @@ const Page = () => {
 
 	if (loader)
 		return (
+		<div className='p-6'>
 			<Card className='mx-auto max-w-sm'>
 				<CardContent className='pt-6'>
 					<div className='space-y-3'>
@@ -114,9 +115,11 @@ const Page = () => {
 					</div>
 				</CardContent>
 			</Card>
+		</div>
 		)
 
 	return (
+		<div className='p-6'>
 		<Card className='max-w-sm mx-auto'>
 			<CardContent className='space-y-3 pt-6'>
 				<Image
@@ -349,6 +352,7 @@ const Page = () => {
 				</Form>
 			</CardContent>
 		</Card>
+		</div>
 	)
 }
 

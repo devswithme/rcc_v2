@@ -17,6 +17,7 @@ import { useRouter } from 'next/navigation'
 export default function Home() {
 	const router = useRouter()
 	return (
+		<div className='p-6'>
 		<Card className='mx-auto max-w-sm overflow-hidden border-none'>
 			<CardHeader className='relative aspect-square'>
 				<Image
@@ -78,5 +79,6 @@ export default function Home() {
 				</Button>
 			</CardContent>
 		</Card>
+		</div>
 	)
 }
