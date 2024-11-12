@@ -23,6 +23,7 @@ export async function POST(req: Request) {
 			where: { id: 1 },
 			data: {
 				[result.ibadah.replaceAll(' ', '')]:
+				// @ts-expect-error test
 					quota[0][result.ibadah.replaceAll(' ', '')] - 1,
 			},
 		})
