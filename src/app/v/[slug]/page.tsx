@@ -151,7 +151,8 @@ const Page = () => {
 							/>
 							<Button
 								type='submit'
-								className='w-full !mt-10'>
+								className='w-full !mt-10'
+								disabled={isLoading}>
 								{!isLoading ? (<>Verify <ArrowUpRight /></>) : (<>Mohon Tunggu <Loader2 className='animate-spin'/></>)}
 							</Button>
 						</form>

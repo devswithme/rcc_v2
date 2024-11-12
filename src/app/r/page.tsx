@@ -78,7 +78,6 @@ const Page = () => {
 	}, [])
 
 	async function onSubmit(values: z.infer<typeof formSchema>) {
-		console.table(values)
 		setIsLoading(true)
 		try {
 			const result = await axios.post(
