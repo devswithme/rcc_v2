@@ -13,7 +13,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Jemaat {
+model jemaat {
   id String @id @default(cuid())
   ibadah String
   nama String
@@ -27,7 +27,7 @@ model Jemaat {
   link String 
 }
 
-model Quota {
+model quota {
   id Int @id @default(autoincrement())
   KU1 Int
   KU2 Int
