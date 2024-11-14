@@ -13,7 +13,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
+model Jemaat {
   id String @id @default(cuid())
   ibadah String
   nama String

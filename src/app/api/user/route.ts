@@ -5,12 +5,12 @@ export async function POST(req: Request) {
 	try {
 		const request = await req.json()
 
-		const result = await db.user.create({
+		const result = await db.jemaat.create({
 			data: request,
 			select: { id: true, ibadah: true },
 		})
 
-		await db.user.update({
+		await db.jemaat.update({
 			where: {
 				id: result.id,
 			},
@@ -38,7 +38,7 @@ export async function PUT(req: Request) {
 	try {
 		const request = await req.json()
 
-		const result = await db.user.findUnique({
+		const result = await db.jemaat.findUnique({
 			where: { id: request.id },
 			select: {
 				link: true,
@@ -59,7 +59,7 @@ export async function PATCH(req: Request) {
 	try {
 		const request = await req.json()
 
-		await db.user.update({
+		await db.jemaat.update({
 			where: { id: request.id },
 			data: { isVerified: true },
 		})
