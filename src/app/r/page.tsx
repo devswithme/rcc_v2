@@ -163,7 +163,7 @@ const Page = () => {
 												<SelectItem value='KU 1'>
 													KU 1 - 08:30 WITA{' '}
 													<span className='font-semibold'>
-														({quota.KU1} orang)
+														(Sisa kuota: {quota.KU1} orang)
 													</span>
 												</SelectItem>
 											)}
@@ -171,7 +171,7 @@ const Page = () => {
 												<SelectItem value='KU 2'>
 													KU 2 - 12:00 WITA{' '}
 													<span className='font-semibold'>
-														({quota.KU2} orang)
+														(Sisa kuota: {quota.KU2} orang)
 													</span>
 												</SelectItem>
 											)}
@@ -179,7 +179,7 @@ const Page = () => {
 												<SelectItem value='KU 3'>
 													KU 3 - 16:00 WITA{' '}
 													<span className='font-semibold'>
-														({quota.KU3} orang)
+														(Sisa kuota: {quota.KU3} orang)
 													</span>
 												</SelectItem>
 											)}
@@ -217,7 +217,7 @@ const Page = () => {
 										Nomor Whatsapp
 									</FormLabel>
 									<FormControl>
-										<Input {...field} />
+										<Input {...field} placeholder='08'/>
 									</FormControl>
 								</FormItem>
 							)}
