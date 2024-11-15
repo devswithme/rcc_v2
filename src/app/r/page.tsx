@@ -121,7 +121,7 @@ const Page = () => {
 		)
 
 	return (
-		<div className='p-6'>
+		<div className='p-6 pb-16'>
 			<ContactPerson />
 		<Card className='max-w-sm mx-auto'>
 			<CardContent className='space-y-3 pt-6'>
@@ -299,7 +299,7 @@ const Page = () => {
 								</FormItem>
 							)}
 						/>
-						{form.getValues('komsel') === 'sudah' && (
+						{(form.getValues('komsel') === 'sudah' && form.getValues('komsel') !== 'belum' && form.getValues('komsel') !== '') && (
 							<>
 								<FormField
 									control={form.control}
