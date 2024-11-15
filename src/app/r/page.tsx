@@ -220,7 +220,7 @@ const Page = () => {
 										Nomor Whatsapp
 									</FormLabel>
 									<FormControl>
-										<Input {...field} placeholder='08'/>
+										<Input {...field} type='tel' placeholder='08'/>
 									</FormControl>
 								</FormItem>
 							)}
