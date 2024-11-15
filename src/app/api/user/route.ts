@@ -6,7 +6,8 @@ export async function POST(req: Request) {
 		const request = await req.json()
 		
 		const quota = await db.quota.findMany()
-
+		
+		// @ts-expect-error test
 		if(quota[0][request.ibadah.replaceAll(' ', '')] > 0){
 			const result = await db.jemaat.create({
 				data: request,
