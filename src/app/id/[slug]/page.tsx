@@ -22,6 +22,7 @@ import {
 } from '@/components/ui/alert'
 import Image from 'next/image'
 import { Skeleton } from '@/components/ui/skeleton'
+import ContactPerson from '@/components/contact-person'
 
 const Page = () => {
 	const { slug } = useParams()
@@ -86,6 +87,7 @@ const Page = () => {
 	if (loader) {
 		return (
 			<div className='p-6'>
+				<ContactPerson />
 			<Card className='mx-auto max-w-sm'>
 				<CardContent className='pt-6'>
 					<div className='flex flex-col space-y-3'>
@@ -107,6 +109,7 @@ const Page = () => {
 
 	return (
 		<div className='p-6'>
+			<ContactPerson />
 		<Card className='mx-auto max-w-sm'>
 			<CardContent className='pt-6 space-y-6'>
 				<Image
@@ -186,7 +189,7 @@ const Page = () => {
 								onClick={() => {
 									window.location.href = `https://api.whatsapp.com/send/?phone=${
 										'62' + data.whatsapp.slice(1)
-									}&text=${data.link}`
+									}&text=Shalom, Berikut adalah kode QR anda tunjukan saat anda datang beribadah. Pastikan anda datang 30 menit sebelum ibadah dimulai.%0A${data.link}`
 								}}>
 								Simpan <Download />
 							</Button>

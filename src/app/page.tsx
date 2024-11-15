@@ -1,5 +1,6 @@
 'use client'
 
+import ContactPerson from '@/components/contact-person'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import {
@@ -18,6 +19,7 @@ export default function Home() {
 	const router = useRouter()
 	return (
 		<div className='p-6'>
+			<ContactPerson />
 		<Card className='mx-auto max-w-sm overflow-hidden border-none'>
 			<CardHeader className='relative aspect-square'>
 				<Image

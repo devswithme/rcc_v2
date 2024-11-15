@@ -1,5 +1,6 @@
 'use client'
 
+import ContactPerson from '@/components/contact-person'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import {
@@ -96,6 +97,7 @@ const Page = () => {
 	if (loader)
 		return (
 		<div className='p-6'>
+			<ContactPerson />
 			<Card className='mx-auto max-w-sm'>
 				<CardContent className='pt-6'>
 					<div className='space-y-3'>
@@ -120,6 +122,7 @@ const Page = () => {
 
 	return (
 		<div className='p-6'>
+			<ContactPerson />
 		<Card className='max-w-sm mx-auto'>
 			<CardContent className='space-y-3 pt-6'>
 				<Image
