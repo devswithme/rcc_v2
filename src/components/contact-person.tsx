@@ -4,7 +4,7 @@ import Image from 'next/image'
 const ContactPerson = () => {
 	return (
 		<Button
-			className='fixed bottom-6 right-6 rounded-full bg-gradient-to-tr from-[#075e54] to-[#25d366] border border-[#075e54] hover:brightness-105 z-16'
+			className='fixed bottom-6 right-6 rounded-full bg-gradient-to-tr from-[#075e54] to-[#25d366] border border-[#075e54] hover:brightness-105 !z-64'
 			onClick={() => {
 				window.location.href =
 					'https://wa.me/6285100878950?text=Shalom%20Saya%20Perlu%20Bantuan%20Mengenai%20Registrasi%20Natal'
