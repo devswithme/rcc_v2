@@ -41,7 +41,7 @@ const Page = () => {
 			whatsapp: '',
 			usia: '',
 			alamat: '',
-			komsel: '',
+			komsel: 'belum',
 			GKK: '',
 			KK: '',
 			link: '',
@@ -121,7 +121,7 @@ const Page = () => {
 		)
 
 	return (
-		<div className='p-6 pb-16'>
+		<div className='p-6 pb-20'>
 			<ContactPerson />
 		<Card className='max-w-sm mx-auto'>
 			<CardContent className='space-y-3 pt-6'>
@@ -286,6 +286,14 @@ const Page = () => {
 													Sudah
 												</FormLabel>
 											</FormItem>
+											<FormItem className='flex items-center space-x-3 space-y-0 hidden'>
+												<FormControl>
+													<RadioGroupItem value='belum' />
+												</FormControl>
+												<FormLabel className='font-normal'>
+													Sudah
+												</FormLabel>
+											</FormItem>
 											<FormItem className='flex items-center space-x-3 space-y-0'>
 												<FormControl>
 													<RadioGroupItem value='belum' />
@@ -299,7 +307,7 @@ const Page = () => {
 								</FormItem>
 							)}
 						/>
-						{(form.getValues('komsel') === 'sudah' && form.getValues('komsel') !== 'belum' && form.getValues('komsel') !== '') && (
+						{form.getValues('komsel') === 'sudah' && (
 							<>
 								<FormField
 									control={form.control}

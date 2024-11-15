@@ -108,7 +108,7 @@ const Page = () => {
 	}
 
 	return (
-		<div className='p-6 pb-16'>
+		<div className='p-6 pb-20'>
 			<ContactPerson />
 		<Card className='mx-auto max-w-sm'>
 			<CardContent className='pt-6 space-y-6'>
