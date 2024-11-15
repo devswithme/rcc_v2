@@ -6,18 +6,16 @@ const formSchema = z.object({
 	whatsapp: z.string().nonempty(),
 	usia: z.string().nonempty(),
 	alamat: z.string().nonempty(),
-	komsel: z.string().,
+	komsel: z.string(),
 	GKK: z.string(),
 	KK: z.string(),
 	link: z.string(),
-})
-.refine(
+}).refine(
     (data) => data.komsel !== "sudah" || data.GKK.trim().length > 0,
     {
       path: ["GKK"],
     }
-  )
-  .refine(
+  ).refine(
     (data) => data.komsel !== "sudah" || data.KK.trim().length > 0,
     {
       path: ["KK"],
