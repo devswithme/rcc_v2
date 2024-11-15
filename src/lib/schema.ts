@@ -6,11 +6,12 @@ const formSchema = z.object({
 	whatsapp: z.string().nonempty(),
 	usia: z.string().nonempty(),
 	alamat: z.string().nonempty(),
-	komsel: z.string(),
+	komsel: z.string().,
 	GKK: z.string(),
 	KK: z.string(),
 	link: z.string(),
-}).refine(
+})
+.refine(
     (data) => data.komsel !== "sudah" || data.GKK.trim().length > 0,
     {
       path: ["GKK"],
@@ -21,7 +22,9 @@ const formSchema = z.object({
     {
       path: ["KK"],
     }
-  );
+  ).refine((data) => data.komsel !== "null" || data.komsel.trim().length > 0, {
+	path: ["komsel"],
+  });
 
 const pinSchema = z.object({
 	PIN: z.string().nonempty(),

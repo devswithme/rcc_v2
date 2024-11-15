@@ -41,7 +41,7 @@ const Page = () => {
 			whatsapp: '',
 			usia: '',
 			alamat: '',
-			komsel: '',
+			komsel: 'null',
 			GKK: '',
 			KK: '',
 			link: '',
