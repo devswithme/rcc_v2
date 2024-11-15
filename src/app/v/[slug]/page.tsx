@@ -142,7 +142,7 @@ const Page = () => {
 										<FormLabel>PIN</FormLabel>
 										<FormControl>
 											<Input
-												type='password'
+												type='number'
 												{...field}
 											/>
 										</FormControl>

@@ -69,8 +69,15 @@ const Page = () => {
 				const result = await axios.get(
 					'https://rccdenpasar.org/api/quota'
 				)
-				setQuota(result.data)
-				setLoader(false)
+
+				const {KU1, KU2, KU3} = result.data
+
+				if(KU1 === 0 && KU2 === 0 && KU3 === 0){
+					alert('Maaf kuota sudah penuh')
+				} else {
+					setQuota(result.data)
+					setLoader(false)
+				}
 			} catch {
 				alert('terjadi kesalahan')
 			}
@@ -86,9 +93,13 @@ const Page = () => {
 				values
 			)
 
-			router.push(`/id/${result.data.id}`)
-			form.reset()
-			// setIsLoading(false)
+			if(result.status === 200){
+				alert('Maaf mohon mengulang mengisi data')
+			} else {
+				router.push(`/id/${result.data.id}`)
+				form.reset()
+				// setIsLoading(false)
+			}
 		} catch {
 			alert('terjadi kesalahan')
 		}

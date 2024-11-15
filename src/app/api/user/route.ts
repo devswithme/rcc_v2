@@ -4,31 +4,36 @@ import db from '@/lib/db'
 export async function POST(req: Request) {
 	try {
 		const request = await req.json()
-
-		const result = await db.jemaat.create({
-			data: request,
-			select: { id: true, ibadah: true },
-		})
-
-		await db.jemaat.update({
-			where: {
-				id: result.id,
-			},
-			data: { link: `https://rccdenpasar.org/v/${result.id}` },
-		})
-
+		
 		const quota = await db.quota.findMany()
 
-		await db.quota.update({
-			where: { id: 1 },
-			data: {
-				[result.ibadah.replaceAll(' ', '')]:
-				// @ts-expect-error test
-					quota[0][result.ibadah.replaceAll(' ', '')] - 1,
-			},
-		})
+		if(quota[0][request.ibadah.replaceAll(' ', '')] > 0){
+			const result = await db.jemaat.create({
+				data: request,
+				select: { id: true, ibadah: true },
+			})
+	
+			await db.jemaat.update({
+				where: {
+					id: result.id,
+				},
+				data: { link: `https://rccdenpasar.org/v/${result.id}` },
+			})
+	
+	
+			await db.quota.update({
+				where: { id: 1 },
+				data: {
+					[result.ibadah.replaceAll(' ', '')]:
+					// @ts-expect-error test
+						quota[0][result.ibadah.replaceAll(' ', '')] - 1,
+				},
+			})
+			return NextResponse.json(result, { status: 201 })
+		} else {
+			return NextResponse.json({ status: 200 })
 
-		return NextResponse.json(result, { status: 201 })
+
 	} catch (err) {
 		return NextResponse.json(err, { status: 500 })
 	}
