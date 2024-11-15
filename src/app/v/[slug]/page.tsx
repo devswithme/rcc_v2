@@ -144,7 +144,7 @@ const Page = () => {
 											<Input
 												type='number'
 												{...field}
-												className='tracking-wider'
+												className='tracking-widest'
 											/>
 										</FormControl>
 									</FormItem>
