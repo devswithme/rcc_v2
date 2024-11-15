@@ -276,19 +276,10 @@ const Page = () => {
 									<FormControl>
 										<RadioGroup
 											onValueChange={field.onChange}
-											defaultValue={field.value}
 											className='flex gap-x-3'>
 											<FormItem className='flex items-center space-x-3 space-y-0'>
 												<FormControl>
 													<RadioGroupItem value='sudah' />
-												</FormControl>
-												<FormLabel className='font-normal'>
-													Sudah
-												</FormLabel>
-											</FormItem>
-											<FormItem className='flex items-center space-x-3 space-y-0 hidden'>
-												<FormControl>
-													<RadioGroupItem value='belum' />
 												</FormControl>
 												<FormLabel className='font-normal'>
 													Sudah
