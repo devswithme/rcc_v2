@@ -144,6 +144,7 @@ const Page = () => {
 											<Input
 												type='number'
 												{...field}
+												className='tracking-loose'
 											/>
 										</FormControl>
 									</FormItem>
