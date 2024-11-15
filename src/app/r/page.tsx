@@ -41,7 +41,7 @@ const Page = () => {
 			whatsapp: '',
 			usia: '',
 			alamat: '',
-			komsel: 'belum',
+			komsel: '',
 			GKK: '',
 			KK: '',
 			link: '',
@@ -151,7 +151,7 @@ const Page = () => {
 										<span className='font-mono text-xs font-light'>
 											[1]
 										</span>{' '}
-										Ibadah
+										Ibadah *
 									</FormLabel>
 									<Select
 										onValueChange={field.onChange}
@@ -200,7 +200,7 @@ const Page = () => {
 										<span className='font-mono text-xs font-light'>
 											[2]
 										</span>{' '}
-										Nama Lengkap
+										Nama Lengkap *
 									</FormLabel>
 									<FormControl>
 										<Input {...field} />
@@ -217,7 +217,7 @@ const Page = () => {
 										<span className='font-mono text-xs font-light'>
 											[3]
 										</span>{' '}
-										Nomor Whatsapp
+										Nomor Whatsapp *
 									</FormLabel>
 									<FormControl>
 										<Input {...field} type='tel' placeholder='08'/>
@@ -234,7 +234,7 @@ const Page = () => {
 										<span className='font-mono text-xs font-light'>
 											[4]
 										</span>{' '}
-										Usia
+										Usia *
 									</FormLabel>
 									<FormControl>
 										<Input
@@ -254,7 +254,7 @@ const Page = () => {
 										<span className='font-mono text-xs font-light'>
 											[5]
 										</span>{' '}
-										Alamat Lengkap
+										Alamat Lengkap *
 									</FormLabel>
 									<FormControl>
 										<Input {...field} />
@@ -271,7 +271,7 @@ const Page = () => {
 										<span className='font-mono text-xs font-light'>
 											[6]
 										</span>{' '}
-										Sudah berkomsel?
+										Sudah berkomsel? *
 									</FormLabel>
 									<FormControl>
 										<RadioGroup
@@ -309,7 +309,7 @@ const Page = () => {
 												<span className='font-mono text-xs font-light'>
 													[7]
 												</span>{' '}
-												Nama GKK
+												Nama GKK *
 											</FormLabel>
 											<FormControl>
 												<Input {...field} />
@@ -326,7 +326,7 @@ const Page = () => {
 												<span className='font-mono text-xs font-light'>
 													[8]
 												</span>{' '}
-												Nama KK
+												Nama KK *
 											</FormLabel>
 											<FormControl>
 												<Input {...field} />
