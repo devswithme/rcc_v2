@@ -143,7 +143,6 @@ const Page = () => {
 										<FormControl>
 											<Input
 												type='number'
-												max={4}
 												{...field}
 											/>
 										</FormControl>

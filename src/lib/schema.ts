@@ -23,7 +23,7 @@ const formSchema = z.object({
   )
 
 const pinSchema = z.object({
-	PIN: z.string().nonempty(),
+	PIN: z.string().nonempty().min(4),
 })
 
 export { formSchema, pinSchema }
