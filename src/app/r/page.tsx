@@ -40,7 +40,7 @@ const Page = () => {
 			whatsapp: '',
 			usia: '',
 			alamat: '',
-			komsel: 'belum',
+			komsel: '',
 			GKK: '',
 			KK: '',
 			link: '',

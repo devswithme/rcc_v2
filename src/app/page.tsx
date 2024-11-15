@@ -55,7 +55,7 @@ export default function Home() {
 							},
 							{
 								jam: '16:00 WITA',
-								pembicara: 'Pdt. David Limanto',
+								pembicara: 'Pdt. Frengky Utana',
 							},
 						].map((item, i) => (
 							<TableRow key={i}>
