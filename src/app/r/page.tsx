@@ -41,7 +41,7 @@ const Page = () => {
 			whatsapp: '',
 			usia: '',
 			alamat: '',
-			komsel: 'null',
+			komsel: 'sudah',
 			GKK: '',
 			KK: '',
 			link: '',
@@ -276,6 +276,7 @@ const Page = () => {
 									<FormControl>
 										<RadioGroup
 											onValueChange={field.onChange}
+											defaultValue={field.value}
 											className='flex gap-x-3'>
 											<FormItem className='flex items-center space-x-3 space-y-0'>
 												<FormControl>

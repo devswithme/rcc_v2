@@ -20,9 +20,7 @@ const formSchema = z.object({
     {
       path: ["KK"],
     }
-  ).refine((data) => data.komsel !== "null" || data.komsel.trim().length > 0, {
-	path: ["komsel"],
-  });
+  )
 
 const pinSchema = z.object({
 	PIN: z.string().nonempty(),
