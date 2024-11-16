@@ -43,7 +43,7 @@ const Page = () => {
 			alamat: '',
 			komsel: 'sudah',
 			GKK: '',
-			KK: '',
+			KK: 'rcc',
 			link: '',
 		},
 	})
@@ -332,6 +332,7 @@ const Page = () => {
 								<FormField
 									control={form.control}
 									name='KK'
+									className='hidden'
 									render={({ field }) => (
 										<FormItem>
 											<FormLabel className='font-semibold'>
