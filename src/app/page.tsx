@@ -77,7 +77,7 @@ export default function Home() {
 				<Button
 					className='w-full !mt-10'
 					onClick={() => router.push('/r')}>
-					Daftar sekarang <ArrowUpRight />
+					Daftar Sekarang <ArrowUpRight />
 				</Button>
 			</CardContent>
 		</Card>

@@ -21,7 +21,6 @@ model jemaat {
   usia String
   alamat String
   komsel String
-  KK String?
   GKK String?
   isVerified Boolean @default(false)
   link String 

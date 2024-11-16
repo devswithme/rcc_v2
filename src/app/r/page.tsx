@@ -43,7 +43,6 @@ const Page = () => {
 			alamat: '',
 			komsel: 'sudah',
 			GKK: '',
-			KK: 'rcc',
 			link: '',
 		},
 	})
@@ -311,7 +310,6 @@ const Page = () => {
 							)}
 						/>
 						{form.getValues('komsel') === 'sudah' && (
-							<>
 								<FormField
 									control={form.control}
 									name='GKK'
@@ -329,24 +327,6 @@ const Page = () => {
 										</FormItem>
 									)}
 								/>
-								<FormField
-									control={form.control}
-									name='KK'
-									render={({ field }) => (
-										<FormItem className='hidden'>
-											<FormLabel className='font-semibold'>
-												<span className='font-mono text-xs font-light'>
-													[8]
-												</span>{' '}
-												Nama KK *
-											</FormLabel>
-											<FormControl>
-												<Input {...field} />
-											</FormControl>
-										</FormItem>
-									)}
-								/>
-							</>
 						)}
 						<Button
 							type='submit'
