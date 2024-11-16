@@ -332,9 +332,8 @@ const Page = () => {
 								<FormField
 									control={form.control}
 									name='KK'
-									className='hidden'
 									render={({ field }) => (
-										<FormItem>
+										<FormItem className='hidden'>
 											<FormLabel className='font-semibold'>
 												<span className='font-mono text-xs font-light'>
 													[8]
