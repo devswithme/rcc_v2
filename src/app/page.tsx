@@ -53,7 +53,7 @@ export default function Home() {
 							},
 							{
 								jam: '12:00 WITA',
-								pembicara: 'Pdt. David Limanto',
+								pembicara: 'Pdp. Immanuel Ricco',
 							},
 							{
 								jam: '16:00 WITA',
