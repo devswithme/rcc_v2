@@ -26,7 +26,7 @@ export default function Home() {
 					src='/cover.jpg'
 					alt='home'
 					fill
-					className='object-cover'
+					className='object-cover object-top'
 					priority
 					sizes='20'
 				/>
