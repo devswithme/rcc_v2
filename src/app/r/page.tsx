@@ -142,7 +142,7 @@ const Page = () => {
 					alt='logo'
 					className='mx-auto w-auto h-auto'
 				/>
-				<div className='text-center text-[#871d39] space-y-1'>
+				<div className='text-center text-[#10133a] space-y-1'>
 					<h1 className='text-xl font-semibold text-balance leading-tight'>
 						Formulir Registrasi Online Ibadah Natal RCC
 					</h1>

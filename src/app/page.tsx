@@ -23,15 +23,16 @@ export default function Home() {
 		<Card className='mx-auto max-w-sm overflow-hidden border-none'>
 			<CardHeader className='relative aspect-square'>
 				<Image
-					src='/home.jpg'
+					src='/cover.jpg'
 					alt='home'
 					fill
+					className='object-fit'
 					priority
 					sizes='20'
 				/>
 			</CardHeader>
-			<CardContent className='space-y-3'>
-				<div className='text-center text-[#871d39] space-y-1'>
+			<CardContent className='space-y-3 pt-6'>
+				<div className='text-center text-[#10133a] space-y-1'>
 					<h1 className='text-xl font-semibold text-balance leading-tight'>
 						Jadwal Ibadah Natal RCC
 					</h1>
