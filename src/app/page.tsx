@@ -26,7 +26,7 @@ export default function Home() {
 					src='/cover.jpg'
 					alt='home'
 					fill
-					className='object-fit'
+					className='object-cover'
 					priority
 					sizes='20'
 				/>
