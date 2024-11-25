@@ -157,7 +157,7 @@ const Page = () => {
 							<Label>Link</Label>
 							<div className='flex gap-x-2'>
 								<Input
-									value={data.link}
+									value={data.link.replace("/v/", "/id/")}
 									disabled
 								/>
 								<Button
@@ -165,7 +165,7 @@ const Page = () => {
 									className='aspect-square'
 									variant='outline'
 									onClick={() => {
-										window.navigator.clipboard.writeText(data.link)
+										window.navigator.clipboard.writeText(data.link.replace("/v/", "/id/"))
 									}}>
 									<Copy />
 								</Button>
@@ -189,7 +189,7 @@ const Page = () => {
 								onClick={() => {
 									window.location.href = `https://api.whatsapp.com/send/?phone=${
 										'62' + data.whatsapp.slice(1)
-									}&text=Shalom, Berikut adalah kode QR anda tunjukan saat anda datang beribadah. Pastikan anda datang 30 menit sebelum ibadah dimulai.%0A${data.link}`
+									}&text=Shalom, Berikut adalah kode QR anda tunjukan saat anda datang beribadah. Pastikan anda datang 30 menit sebelum ibadah dimulai.%0A${data.link.replace("/v/", "/id/")}`
 								}}>
 								Simpan <Download />
 							</Button>
