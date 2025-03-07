@@ -31,4 +31,6 @@ model quota {
   KU1 Int
   KU2 Int
   KU3 Int
+  KU4 Int
+  KU5 Int
 }
