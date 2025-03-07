@@ -2,7 +2,7 @@
 
 import ContactPerson from '@/components/contact-person'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import { Card, CardContent } from '@/components/ui/card'
 import {
 	Table,
 	TableBody,
@@ -12,7 +12,6 @@ import {
 	TableRow,
 } from '@/components/ui/table'
 import { ArrowUpRight } from 'lucide-react'
-import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 
 export default function Home() {
