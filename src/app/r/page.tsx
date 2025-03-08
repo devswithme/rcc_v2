@@ -49,8 +49,7 @@ const Page = () => {
 
 	const router = useRouter()
 
-	const pathname = useSearchParams()
-	const query = pathname.get('q')
+	const [query, setQuery] = useState('')
 
 	const [quota, setQuota] = useState<{
 		KU1: number
@@ -66,13 +65,18 @@ const Page = () => {
 		KU5: 0,
 	})
 
+	const pathname = useSearchParams()
+
 	const [isLoading, setIsLoading] = useState<boolean>(false)
 	const [loader, setLoader] = useState<boolean>(true)
 
 	useEffect(() => {
-		if (query !== 'p' && query !== 'j') {
+		const q = pathname.get('q')
+		if (q !== 'p' && q !== 'j') {
 			router.push('/')
 		}
+
+		setQuery(q || '')
 
 		async function getQuota() {
 			try {
@@ -95,7 +99,7 @@ const Page = () => {
 			}
 		}
 		getQuota()
-	}, [query, router])
+	}, [pathname, router])
 
 	async function onSubmit(values: z.infer<typeof formSchema>) {
 		try {
