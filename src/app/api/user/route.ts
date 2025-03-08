@@ -19,7 +19,7 @@ export async function POST(req: Request) {
 					id: result.id,
 				},
 				data: {
-					link: `${process.env.NEXT_PUBLIC_APP_PROTOCOL}://${process.env.NEXT_PUBLIC_APP_HOST}:${process.env.NEXT_PUBLIC_APP_PORT}/v/${result.id}`,
+					link: `${process.env.NEXT_PUBLIC_APP_URL}/v/${result.id}`,
 				},
 			})
 

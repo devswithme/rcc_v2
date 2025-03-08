@@ -58,7 +58,7 @@ const Page = () => {
 		async function getUser() {
 			try {
 				const result = await axios.put(
-					`${process.env.NEXT_PUBLIC_APP_PROTOCOL}://${process.env.NEXT_PUBLIC_APP_HOST}:${process.env.NEXT_PUBLIC_APP_PORT}/api/user`,
+					`${process.env.NEXT_PUBLIC_APP_URL}/api/user`,
 					{
 						id: slug,
 					}
