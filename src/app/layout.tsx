@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 		icon: {
 			url: '/logo.png',
 			sizes: '16x16',
-			type: 'image/png'
-		}
+			type: 'image/png',
+		},
 	},
 	title: 'SON OF MAN - Christmas Celebration 2024',
 	description: 'Formulir Registrasi Online Ibadah Natal RCC',
@@ -26,7 +26,7 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body
-				className={`${font.className} antialiased bg-[#10133a] relative`}>
+				className={`${font.className} antialiased bg-[#871d39] relative`}>
 				{children}
 			</body>
 		</html>

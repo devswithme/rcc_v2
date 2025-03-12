@@ -12,7 +12,7 @@ import {
 	TableRow,
 } from '@/components/ui/table'
 import { ArrowUpRight } from 'lucide-react'
-import Image from 'next/image'
+// import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 
 export default function Home() {
@@ -20,68 +20,111 @@ export default function Home() {
 	return (
 		<div className='p-6 pb-20'>
 			<ContactPerson />
-		<Card className='mx-auto max-w-sm overflow-hidden border-none'>
-			<CardHeader className='relative aspect-square'>
-				<Image
-					src='/cover.jpg'
-					alt='home'
-					fill
-					className='object-cover object-top'
-					priority
-					sizes='20'
-				/>
-			</CardHeader>
-			<CardContent className='space-y-3 pt-6'>
-				<div className='text-center text-[#10133a] space-y-1'>
-					<h1 className='text-xl font-semibold text-balance leading-tight'>
-						Jadwal Ibadah Natal RCC
-					</h1>
-					<p className='text-sm'>22 Desember 2024</p>
-				</div>
-				<Table>
-					<TableHeader>
-						<TableRow>
-							<TableHead>Ibadah</TableHead>
-							<TableHead className='text-center'>Jam</TableHead>
-							<TableHead className='text-right'>Pembicara</TableHead>
-						</TableRow>
-					</TableHeader>
-					<TableBody>
-						{[
-							{
-								jam: '8:30 WITA',
-								pembicara: 'Pdt. David Limanto',
-							},
-							{
-								jam: '12:00 WITA',
-								pembicara: 'Pdp. Immanuel Ricco',
-							},
-							{
-								jam: '16:00 WITA',
-								pembicara: 'Pdt. Frengky Utana',
-							},
-						].map((item, i) => (
-							<TableRow key={i}>
-								<TableCell className='font-medium'>{`KU ${
-									i + 1
-								}`}</TableCell>
-								<TableCell className='text-center'>
-									{item.jam}
-								</TableCell>
-								<TableCell className='text-right'>
-									{item.pembicara}
-								</TableCell>
+			<Card className='mx-auto max-w-sm overflow-hidden border-none'>
+				<CardHeader className='relative aspect-square bg-neutral-200'>
+					{/* <Image
+						src='/cover.jpg'
+						alt='home'
+						fill
+						className='object-cover object-top'
+						priority
+						sizes='20'
+					/> */}
+				</CardHeader>
+				<CardContent className='space-y-3 pt-6'>
+					<div className='text-center text-[#10133a] space-y-1'>
+						<h1 className='text-xl font-semibold text-balance leading-tight'>
+							Jadwal Ibadah Jumat Agung dan Paskah RCC
+						</h1>
+						<p className='text-sm'>18 dan 20 April 2024</p>
+					</div>
+					<Table>
+						<TableHeader>
+							<TableRow>
+								<TableHead>Ibadah</TableHead>
+								<TableHead className='text-right'>Waktu</TableHead>
+								{/* <TableHead className='text-right'>
+									Pembicara
+								</TableHead> */}
 							</TableRow>
-						))}
-					</TableBody>
-				</Table>
-				<Button
-					className='w-full !mt-10'
-					onClick={() => router.push('/r')}>
-					Daftar Sekarang <ArrowUpRight />
-				</Button>
-			</CardContent>
-		</Card>
+						</TableHeader>
+						<TableBody>
+							{[
+								{
+									ibadah: 'Jumat Agung',
+									jam: '18 April 2025',
+									pembicara: '',
+								},
+								{
+									ibadah: 'KU 1',
+									jam: '16:30 - 17:25 WITA',
+									pembicara: '-',
+								},
+								{
+									ibadah: 'KU 2',
+									jam: '19:00 - 20:25 WITA',
+									pembicara: '-',
+								},
+								{
+									ibadah: 'Paskah',
+									jam: '20 April 2025',
+									pembicara: '',
+								},
+								{
+									ibadah: 'KU 1',
+									jam: '08:30 - 10:00 WITA',
+									pembicara: '-',
+								},
+								{
+									ibadah: 'KU 2',
+									jam: '12:00 - 13:30 WITA',
+									pembicara: '-',
+								},
+								{
+									ibadah: 'KU 3',
+									jam: '17:00 - 18:30 WITA',
+									pembicara: '-',
+								},
+							].map((item, i) => (
+								<TableRow
+									key={i}
+									className={`${
+										(item.ibadah === 'Jumat Agung' ||
+											item.ibadah === 'Paskah') &&
+										'bg-neutral-50 border'
+									}`}>
+									<TableCell
+										className={`${
+											item.ibadah === 'Jumat Agung' ||
+											item.ibadah === 'Paskah'
+												? 'font-semibold'
+												: 'font-medium'
+										}`}>
+										{item.ibadah}
+									</TableCell>
+									<TableCell
+										className={`text-right ${
+											item.ibadah === 'Jumat Agung' ||
+											item.ibadah === 'Paskah'
+												? 'font-semibold'
+												: 'font-medium'
+										}`}>
+										{item.jam}
+									</TableCell>
+									{/* <TableCell className='text-right'>
+										{item.pembicara}
+									</TableCell> */}
+								</TableRow>
+							))}
+						</TableBody>
+					</Table>
+					<Button
+						className='w-full !mt-10'
+						onClick={() => router.push('/r')}>
+						Daftar Sekarang <ArrowUpRight />
+					</Button>
+				</CardContent>
+			</Card>
 		</div>
 	)
 }

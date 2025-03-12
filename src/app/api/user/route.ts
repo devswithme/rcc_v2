@@ -4,29 +4,30 @@ import db from '@/lib/db'
 export async function POST(req: Request) {
 	try {
 		const request = await req.json()
-		
+
 		const quota = await db.quota.findMany()
-		
+
 		// @ts-expect-error test
-		if(quota[0][request.ibadah.replaceAll(' ', '')] > 0){
+		if (quota[0][request.ibadah.replaceAll(' ', '')] > 0) {
 			const result = await db.jemaat.create({
 				data: request,
 				select: { id: true, ibadah: true },
 			})
-	
+
 			await db.jemaat.update({
 				where: {
 					id: result.id,
 				},
-				data: { link: `https://rccdenpasar.org/v/${result.id}` },
+				data: {
+					link: `${process.env.NEXT_PUBLIC_APP_URL}/v/${result.id}`,
+				},
 			})
-	
-	
+
 			await db.quota.update({
 				where: { id: 1 },
 				data: {
 					[result.ibadah.replaceAll(' ', '')]:
-					// @ts-expect-error test
+						// @ts-expect-error test
 						quota[0][result.ibadah.replaceAll(' ', '')] - 1,
 				},
 			})
