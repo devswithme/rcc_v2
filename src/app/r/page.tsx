@@ -190,7 +190,7 @@ const Page = () => {
 													</SelectLabel>
 													{quota.KU1 > 0 && (
 														<SelectItem value='KU 1'>
-															KU 1 : 16:30 - 17:25 WITA{' '}
+															KU 1 : 16:00 WITA{' '}
 															<span className='font-semibold'>
 																(Sisa kuota: {quota.KU1} orang)
 															</span>
@@ -198,7 +198,7 @@ const Page = () => {
 													)}
 													{quota.KU2 > 0 && (
 														<SelectItem value='KU 2'>
-															KU 2 : 19:00 - 20:25 WITA{' '}
+															KU 2 : 19:00 WITA{' '}
 															<span className='font-semibold'>
 																(Sisa kuota: {quota.KU2} orang)
 															</span>
@@ -211,7 +211,7 @@ const Page = () => {
 													</SelectLabel>
 													{quota.KU3 > 0 && (
 														<SelectItem value='KU 3'>
-															KU 1 : 08:30 - 10:00 WITA{' '}
+															KU 1 : 08:30 WITA{' '}
 															<span className='font-semibold'>
 																(Sisa kuota: {quota.KU3} orang)
 															</span>
@@ -219,7 +219,7 @@ const Page = () => {
 													)}
 													{quota.KU4 > 0 && (
 														<SelectItem value='KU 4'>
-															KU 2 : 12:00 - 13:30 WITA{' '}
+															KU 2 : 12:00 WITA{' '}
 															<span className='font-semibold'>
 																(Sisa kuota: {quota.KU4} orang)
 															</span>
@@ -227,7 +227,7 @@ const Page = () => {
 													)}
 													{quota.KU5 > 0 && (
 														<SelectItem value='KU 5'>
-															KU 3 : 17:00 - 18:30 WITA{' '}
+															KU 3 : 17:00 WITA{' '}
 															<span className='font-semibold'>
 																(Sisa kuota: {quota.KU5} orang)
 															</span>

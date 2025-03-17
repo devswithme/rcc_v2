@@ -42,10 +42,10 @@ export default function Home() {
 						<TableHeader>
 							<TableRow>
 								<TableHead>Ibadah</TableHead>
-								<TableHead className='text-right'>Waktu</TableHead>
-								{/* <TableHead className='text-right'>
+								<TableHead className='text-center'>Waktu</TableHead>
+								<TableHead className='text-right'>
 									Pembicara
-								</TableHead> */}
+								</TableHead>
 							</TableRow>
 						</TableHeader>
 						<TableBody>
@@ -57,13 +57,13 @@ export default function Home() {
 								},
 								{
 									ibadah: 'KU 1',
-									jam: '16:30 - 17:25 WITA',
-									pembicara: '-',
+									jam: '16:00 WITA',
+									pembicara: 'Pdt. David Limanto',
 								},
 								{
 									ibadah: 'KU 2',
-									jam: '19:00 - 20:25 WITA',
-									pembicara: '-',
+									jam: '19:00 WITA',
+									pembicara: 'Pdt. Ronny DS',
 								},
 								{
 									ibadah: 'Paskah',
@@ -72,18 +72,18 @@ export default function Home() {
 								},
 								{
 									ibadah: 'KU 1',
-									jam: '08:30 - 10:00 WITA',
-									pembicara: '-',
+									jam: '08:30 WITA',
+									pembicara: 'Pdt. Eluzai Frengky Utana',
 								},
 								{
 									ibadah: 'KU 2',
-									jam: '12:00 - 13:30 WITA',
-									pembicara: '-',
+									jam: '12:00 WITA',
+									pembicara: 'Pdm. Immanuel Ricco',
 								},
 								{
 									ibadah: 'KU 3',
-									jam: '17:00 - 18:30 WITA',
-									pembicara: '-',
+									jam: '17:00 WITA',
+									pembicara: 'Pdt. David Limanto',
 								},
 							].map((item, i) => (
 								<TableRow
@@ -103,7 +103,7 @@ export default function Home() {
 										{item.ibadah}
 									</TableCell>
 									<TableCell
-										className={`text-right ${
+										className={`text-center ${
 											item.ibadah === 'Jumat Agung' ||
 											item.ibadah === 'Paskah'
 												? 'font-semibold'
@@ -111,9 +111,9 @@ export default function Home() {
 										}`}>
 										{item.jam}
 									</TableCell>
-									{/* <TableCell className='text-right'>
+									<TableCell className='text-right'>
 										{item.pembicara}
-									</TableCell> */}
+									</TableCell>
 								</TableRow>
 							))}
 						</TableBody>

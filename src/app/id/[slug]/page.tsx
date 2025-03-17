@@ -147,15 +147,15 @@ const Page = () => {
 								<Label>Ibadah</Label>
 								<h1 className='font-semibold'>
 									{data.ibadah === 'KU 1'
-										? data.ibadah + ' : 16:30 - 17:25 WITA'
+										? 'KU 1 - Jumat Agung : 16:00 WITA'
 										: data.ibadah === 'KU 2'
-										? data.ibadah + ' : 19:00 - 20:25 WITA'
+										? 'KU 2 - Jumat Agung : 19:00 WITA'
 										: data.ibadah === 'KU 3'
-										? 'KU 1 : 08:30 - 10:00 WITA'
+										? 'KU 1 - Paskah : 08:30 WITA'
 										: data.ibadah === 'KU 4'
-										? 'KU 2 : 12:00 - 13:30 WITA'
+										? 'KU 2 - Paskah : 12:00 WITA'
 										: data.ibadah === 'KU 5' &&
-										  'KU 3 : 17:00 - 18:30 WITA'}
+										  'KU 3 - Paskah : 17:00 WITA'}
 								</h1>
 							</div>
 							<div className='space-y-1'>
