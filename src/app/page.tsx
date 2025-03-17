@@ -43,7 +43,7 @@ export default function Home() {
 							<TableRow>
 								<TableHead>Ibadah</TableHead>
 								<TableHead>Waktu</TableHead>
-								<TableHead className='text-right'>
+								<TableHead>
 									Pembicara
 								</TableHead>
 							</TableRow>
@@ -111,7 +111,7 @@ export default function Home() {
 										}`}>
 										{item.jam}
 									</TableCell>
-									<TableCell className='text-right'>
+									<TableCell>
 										{item.pembicara}
 									</TableCell>
 								</TableRow>
