@@ -38,58 +38,86 @@ export default function Home() {
 						</h1>
 						<p className='text-sm'>Jadwal Ibadah Jumat Agung dan Paskah RCC</p>
 					</div>
-					<Table className="w-full">
+					<Table>
 						<TableHeader>
 							<TableRow>
-							<TableHead className="w-1/3 min-w-[150px]">Ibadah</TableHead>
-							<TableHead className="w-1/3 min-w-[200px] text-center">
-								Waktu
-							</TableHead>
-							<TableHead className="w-1/3 min-w-[250px] text-right">
-								Pembicara
-							</TableHead>
+								<TableHead>Ibadah</TableHead>
+								<TableHead>Waktu</TableHead>
+								<TableHead className='text-right'>
+									Pembicara
+								</TableHead>
 							</TableRow>
 						</TableHeader>
 						<TableBody>
 							{[
-							{ ibadah: "Jumat Agung", jam: "18 April 2025", pembicara: "" },
-							{ ibadah: "KU 1", jam: "16:00 WITA", pembicara: "Pdt. David Limanto" },
-							{ ibadah: "KU 2", jam: "19:00 WITA", pembicara: "Pdt. Ronny DS" },
-							{ ibadah: "Paskah", jam: "20 April 2025", pembicara: "" },
-							{ ibadah: "KU 1", jam: "08:30 WITA", pembicara: "Pdt. Eluzai Frengky Utana" },
-							{ ibadah: "KU 2", jam: "12:00 WITA", pembicara: "Pdm. Immanuel Ricco" },
-							{ ibadah: "KU 3", jam: "17:00 WITA", pembicara: "Pdt. David Limanto" },
+								{
+									ibadah: 'Jumat Agung',
+									jam: '18 April 2025',
+									pembicara: '',
+								},
+								{
+									ibadah: 'KU 1',
+									jam: '16:00 WITA',
+									pembicara: 'Pdt. David Limanto',
+								},
+								{
+									ibadah: 'KU 2',
+									jam: '19:00 WITA',
+									pembicara: 'Pdt. Ronny DS',
+								},
+								{
+									ibadah: 'Paskah',
+									jam: '20 April 2025',
+									pembicara: '',
+								},
+								{
+									ibadah: 'KU 1',
+									jam: '08:30 WITA',
+									pembicara: 'Pdt. Eluzai Frengky Utana',
+								},
+								{
+									ibadah: 'KU 2',
+									jam: '12:00 WITA',
+									pembicara: 'Pdm. Immanuel Ricco',
+								},
+								{
+									ibadah: 'KU 3',
+									jam: '17:00 WITA',
+									pembicara: 'Pdt. David Limanto',
+								},
 							].map((item, i) => (
-							<TableRow
-								key={i}
-								className={`${
-								(item.ibadah === "Jumat Agung" || item.ibadah === "Paskah") &&
-								"bg-neutral-50"
-								}`}>
-								<TableCell
-								className={`whitespace-nowrap ${
-									item.ibadah === "Jumat Agung" || item.ibadah === "Paskah"
-									? "font-semibold"
-									: "font-medium"
-								}`}>
-								{item.ibadah}
-								</TableCell>
-								<TableCell
-								className={`text-center whitespace-nowrap ${
-									item.ibadah === "Jumat Agung" || item.ibadah === "Paskah"
-									? "font-semibold"
-									: "font-medium"
-								}`}>
-								{item.jam}
-								</TableCell>
-								<TableCell className="text-right whitespace-nowrap">
-								{item.pembicara}
-								</TableCell>
-							</TableRow>
+								<TableRow
+									key={i}
+									className={`${
+										(item.ibadah === 'Jumat Agung' ||
+											item.ibadah === 'Paskah') &&
+										'bg-neutral-50'
+									}`}>
+									<TableCell
+										className={`${
+											item.ibadah === 'Jumat Agung' ||
+											item.ibadah === 'Paskah'
+												? 'font-semibold'
+												: 'font-medium'
+										}`}>
+										{item.ibadah}
+									</TableCell>
+									<TableCell
+										className={`${
+											item.ibadah === 'Jumat Agung' ||
+											item.ibadah === 'Paskah'
+												? 'font-semibold'
+												: 'font-medium'
+										}`}>
+										{item.jam}
+									</TableCell>
+									<TableCell className='text-right'>
+										{item.pembicara}
+									</TableCell>
+								</TableRow>
 							))}
 						</TableBody>
 					</Table>
-
 					<Button
 						className='w-full !mt-10'
 						onClick={() => router.push('/r')}>
