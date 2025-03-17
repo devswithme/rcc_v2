@@ -97,7 +97,7 @@ export default function Home() {
 										className={`${
 											item.ibadah === 'Jumat Agung' ||
 											item.ibadah === 'Paskah'
-												? 'font-semibold'
+												? 'font-semibold col-span-2'
 												: 'font-medium'
 										}`}>
 										{item.ibadah}
