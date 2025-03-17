@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 			type: 'image/png',
 		},
 	},
-	title: 'SON OF MAN - Christmas Celebration 2024',
-	description: 'Formulir Registrasi Online Ibadah Natal RCC',
+	title: 'The Power Of His Resurrection - Ibadah Jumat Agung dan Paskah',
+	description: 'Jadwal Ibadah Jumat Agung dan Paskah RCC',
 }
 
 export default function RootLayout({

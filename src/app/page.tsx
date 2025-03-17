@@ -34,9 +34,9 @@ export default function Home() {
 				<CardContent className='space-y-3 pt-6'>
 					<div className='text-center text-[#10133a] space-y-1'>
 						<h1 className='text-xl font-semibold text-balance leading-tight'>
-							Jadwal Ibadah Jumat Agung dan Paskah RCC
+							The Power Of His Resurrection
 						</h1>
-						<p className='text-sm'>18 dan 20 April 2024</p>
+						<p className='text-sm'>Jadwal Ibadah Jumat Agung dan Paskah RCC</p>
 					</div>
 					<Table>
 						<TableHeader>
