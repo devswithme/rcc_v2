@@ -31,7 +31,7 @@ export default function Home() {
 						sizes='20'
 					/>
 				</CardHeader>
-				<CardContent className='space-y-3'>
+				<CardContent className='space-y-3 pt-10'>
 					<div className='text-center text-[#10133a] space-y-1'>
 						<h1 className='text-xl font-semibold text-balance leading-tight'>
 						Jadwal Ibadah Jumat Agung dan Paskah RCC
