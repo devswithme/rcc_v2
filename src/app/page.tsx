@@ -21,22 +21,22 @@ export default function Home() {
 		<div className='p-6 pb-20'>
 			<ContactPerson />
 			<Card className='mx-auto max-w-sm overflow-hidden border-none'>
-				<CardHeader className='relative aspect-square bg-neutral-200'>
-					{/* <Image
-						src='/cover.jpg'
+				<CardHeader className='relative aspect-square'>
+					<Image
+						src='/cover-web.jpg'
 						alt='home'
 						fill
 						className='object-cover object-top'
 						priority
 						sizes='20'
-					/> */}
+					/>
 				</CardHeader>
 				<CardContent className='space-y-3 pt-6'>
 					<div className='text-center text-[#10133a] space-y-1'>
 						<h1 className='text-xl font-semibold text-balance leading-tight'>
-							The Power Of His Resurrection
+						Jadwal Ibadah Jumat Agung dan Paskah RCC
 						</h1>
-						<p className='text-sm'>Jadwal Ibadah Jumat Agung dan Paskah RCC</p>
+						<p className='text-sm'>18 & 20April 2025</p>
 					</div>
 					<Table>
 						<TableHeader>
