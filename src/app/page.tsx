@@ -31,8 +31,8 @@ export default function Home() {
 						sizes='20'
 					/>
 				</CardHeader>
-				<CardContent className='space-y-3 pt-6 px-0'>
-					<div className='text-center text-[#10133a] space-y-1 px-6'>
+				<CardContent className='space-y-3'>
+					<div className='text-center text-[#10133a] space-y-1'>
 						<h1 className='text-xl font-semibold text-balance leading-tight'>
 						Jadwal Ibadah Jumat Agung dan Paskah RCC
 						</h1>
@@ -119,7 +119,7 @@ export default function Home() {
 						</TableBody>
 					</Table>
 					<Button
-						className='w-full !mt-10 px-6'
+						className='w-full !mt-10'
 						onClick={() => router.push('/r')}>
 						Daftar Sekarang <ArrowUpRight />
 					</Button>
