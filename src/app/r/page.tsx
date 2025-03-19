@@ -340,7 +340,7 @@ const Page = () => {
 												</FormItem>
 												<FormItem className='flex items-center space-x-3 space-y-0'>
 													<FormControl>
-														<RadioGroupItem value='belum' disabled/>
+														<RadioGroupItem value='belum' />
 													</FormControl>
 													<FormLabel className='font-normal'>
 														Belum
