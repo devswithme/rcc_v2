@@ -23,7 +23,7 @@ export default function Home() {
 			<Card className='mx-auto max-w-sm overflow-hidden border-none'>
 				<CardHeader className='relative aspect-square'>
 					<Image
-						src='/cover-web.jpg'
+						src='/cover-new.jpg'
 						alt='home'
 						fill
 						className='object-cover object-top'
